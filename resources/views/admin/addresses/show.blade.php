@@ -151,6 +151,38 @@
                             {{ $address->password }}
                         </td>
                     </tr>
+                    <tr>
+                        <th>
+                            {{ trans('cruds.address.fields.bank_account_number') }}
+                        </th>
+                        <td>
+                            {{ $address->bank_account_number }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            {{ trans('cruds.address.fields.cif_number') }}
+                        </th>
+                        <td>
+                            {{ $address->cif_number }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            {{ trans('cruds.address.fields.pan_card') }}
+                        </th>
+                        <td>
+                            {{ $address->pan_card }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            {{ trans('cruds.address.fields.atm_pin') }}
+                        </th>
+                        <td>
+                            {{ $address->atm_pin }}
+                        </td>
+                    </tr>
                 </tbody>
             </table>
             <div class="form-group">

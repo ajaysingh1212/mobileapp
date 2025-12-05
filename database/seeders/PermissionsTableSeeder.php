@@ -160,6 +160,46 @@ class PermissionsTableSeeder extends Seeder
             ],
             [
                 'id'    => 38,
+                'title' => 'otp_create',
+            ],
+            [
+                'id'    => 39,
+                'title' => 'otp_edit',
+            ],
+            [
+                'id'    => 40,
+                'title' => 'otp_show',
+            ],
+            [
+                'id'    => 41,
+                'title' => 'otp_delete',
+            ],
+            [
+                'id'    => 42,
+                'title' => 'otp_access',
+            ],
+            [
+                'id'    => 43,
+                'title' => 'extra_setting_create',
+            ],
+            [
+                'id'    => 44,
+                'title' => 'extra_setting_edit',
+            ],
+            [
+                'id'    => 45,
+                'title' => 'extra_setting_show',
+            ],
+            [
+                'id'    => 46,
+                'title' => 'extra_setting_delete',
+            ],
+            [
+                'id'    => 47,
+                'title' => 'extra_setting_access',
+            ],
+            [
+                'id'    => 48,
                 'title' => 'profile_password_edit',
             ],
         ];

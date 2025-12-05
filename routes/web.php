@@ -44,6 +44,14 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::post('app-settings/media', 'AppSettingController@storeMedia')->name('app-settings.storeMedia');
     Route::post('app-settings/ckmedia', 'AppSettingController@storeCKEditorImages')->name('app-settings.storeCKEditorImages');
     Route::resource('app-settings', 'AppSettingController');
+
+    // Otp
+    Route::delete('otps/destroy', 'OtpController@massDestroy')->name('otps.massDestroy');
+    Route::resource('otps', 'OtpController');
+
+    // Extra Setting
+    Route::delete('extra-settings/destroy', 'ExtraSettingController@massDestroy')->name('extra-settings.massDestroy');
+    Route::resource('extra-settings', 'ExtraSettingController');
 });
 Route::group(['prefix' => 'profile', 'as' => 'profile.', 'namespace' => 'Auth', 'middleware' => ['auth']], function () {
     // Change password

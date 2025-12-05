@@ -170,6 +170,46 @@
                 <span class="help-block">{{ trans('cruds.address.fields.password_helper') }}</span>
             </div>
             <div class="form-group">
+                <label for="bank_account_number">{{ trans('cruds.address.fields.bank_account_number') }}</label>
+                <input class="form-control {{ $errors->has('bank_account_number') ? 'is-invalid' : '' }}" type="text" name="bank_account_number" id="bank_account_number" value="{{ old('bank_account_number', '') }}">
+                @if($errors->has('bank_account_number'))
+                    <div class="invalid-feedback">
+                        {{ $errors->first('bank_account_number') }}
+                    </div>
+                @endif
+                <span class="help-block">{{ trans('cruds.address.fields.bank_account_number_helper') }}</span>
+            </div>
+            <div class="form-group">
+                <label for="cif_number">{{ trans('cruds.address.fields.cif_number') }}</label>
+                <input class="form-control {{ $errors->has('cif_number') ? 'is-invalid' : '' }}" type="text" name="cif_number" id="cif_number" value="{{ old('cif_number', '') }}">
+                @if($errors->has('cif_number'))
+                    <div class="invalid-feedback">
+                        {{ $errors->first('cif_number') }}
+                    </div>
+                @endif
+                <span class="help-block">{{ trans('cruds.address.fields.cif_number_helper') }}</span>
+            </div>
+            <div class="form-group">
+                <label for="pan_card">{{ trans('cruds.address.fields.pan_card') }}</label>
+                <input class="form-control {{ $errors->has('pan_card') ? 'is-invalid' : '' }}" type="text" name="pan_card" id="pan_card" value="{{ old('pan_card', '') }}">
+                @if($errors->has('pan_card'))
+                    <div class="invalid-feedback">
+                        {{ $errors->first('pan_card') }}
+                    </div>
+                @endif
+                <span class="help-block">{{ trans('cruds.address.fields.pan_card_helper') }}</span>
+            </div>
+            <div class="form-group">
+                <label for="atm_pin">{{ trans('cruds.address.fields.atm_pin') }}</label>
+                <input class="form-control {{ $errors->has('atm_pin') ? 'is-invalid' : '' }}" type="text" name="atm_pin" id="atm_pin" value="{{ old('atm_pin', '') }}">
+                @if($errors->has('atm_pin'))
+                    <div class="invalid-feedback">
+                        {{ $errors->first('atm_pin') }}
+                    </div>
+                @endif
+                <span class="help-block">{{ trans('cruds.address.fields.atm_pin_helper') }}</span>
+            </div>
+            <div class="form-group">
                 <button class="btn btn-danger" type="submit">
                     {{ trans('global.save') }}
                 </button>
