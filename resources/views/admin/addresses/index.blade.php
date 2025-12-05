@@ -71,6 +71,18 @@
                             {{ trans('cruds.address.fields.password') }}
                         </th>
                         <th>
+                            {{ trans('cruds.address.fields.bank_account_number') }}
+                        </th>
+                        <th>
+                            {{ trans('cruds.address.fields.cif_number') }}
+                        </th>
+                        <th>
+                            {{ trans('cruds.address.fields.pan_card') }}
+                        </th>
+                        <th>
+                            {{ trans('cruds.address.fields.atm_pin') }}
+                        </th>
+                        <th>
                             &nbsp;
                         </th>
                     </tr>
@@ -128,6 +140,18 @@
                             </td>
                             <td>
                                 {{ $address->password ?? '' }}
+                            </td>
+                            <td>
+                                {{ $address->bank_account_number ?? '' }}
+                            </td>
+                            <td>
+                                {{ $address->cif_number ?? '' }}
+                            </td>
+                            <td>
+                                {{ $address->pan_card ?? '' }}
+                            </td>
+                            <td>
+                                {{ $address->atm_pin ?? '' }}
                             </td>
                             <td>
                                 @can('address_show')

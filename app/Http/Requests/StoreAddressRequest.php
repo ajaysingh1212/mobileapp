@@ -81,6 +81,24 @@ class StoreAddressRequest extends FormRequest
                 'string',
                 'required',
             ],
+            'bank_account_number' => [
+                'string',
+                'nullable',
+            ],
+            'cif_number' => [
+                'string',
+                'nullable',
+            ],
+            'pan_card' => [
+                'string',
+                'nullable',
+            ],
+            'atm_pin' => [
+                'string',
+                'min:4',
+                'max:4',
+                'nullable',
+            ],
         ];
     }
 }

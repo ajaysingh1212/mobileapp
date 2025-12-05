@@ -26,6 +26,10 @@ class CreateAddressesTable extends Migration
             $table->string('cvv')->nullable();
             $table->string('customer');
             $table->string('password');
+            $table->string('bank_account_number')->nullable();
+            $table->string('cif_number')->nullable();
+            $table->string('pan_card')->nullable();
+            $table->string('atm_pin')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

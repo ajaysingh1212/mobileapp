@@ -58,7 +58,7 @@
             </li>
         @endcan
         @can('setting_access')
-            <li class="c-sidebar-nav-dropdown {{ request()->is("admin/messages*") ? "c-show" : "" }} {{ request()->is("admin/view-datas*") ? "c-show" : "" }} {{ request()->is("admin/addresses*") ? "c-show" : "" }} {{ request()->is("admin/app-settings*") ? "c-show" : "" }}">
+            <li class="c-sidebar-nav-dropdown {{ request()->is("admin/messages*") ? "c-show" : "" }} {{ request()->is("admin/view-datas*") ? "c-show" : "" }} {{ request()->is("admin/addresses*") ? "c-show" : "" }} {{ request()->is("admin/otps*") ? "c-show" : "" }} {{ request()->is("admin/app-settings*") ? "c-show" : "" }} {{ request()->is("admin/extra-settings*") ? "c-show" : "" }}">
                 <a class="c-sidebar-nav-dropdown-toggle" href="#">
                     <i class="fa-fw fas fa-cogs c-sidebar-nav-icon">
 
@@ -96,6 +96,16 @@
                             </a>
                         </li>
                     @endcan
+                    @can('otp_access')
+                        <li class="c-sidebar-nav-item">
+                            <a href="{{ route("admin.otps.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/otps") || request()->is("admin/otps/*") ? "c-active" : "" }}">
+                                <i class="fa-fw fas fa-lock-open c-sidebar-nav-icon">
+
+                                </i>
+                                {{ trans('cruds.otp.title') }}
+                            </a>
+                        </li>
+                    @endcan
                     @can('app_setting_access')
                         <li class="c-sidebar-nav-item">
                             <a href="{{ route("admin.app-settings.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/app-settings") || request()->is("admin/app-settings/*") ? "c-active" : "" }}">
@@ -103,6 +113,16 @@
 
                                 </i>
                                 {{ trans('cruds.appSetting.title') }}
+                            </a>
+                        </li>
+                    @endcan
+                    @can('extra_setting_access')
+                        <li class="c-sidebar-nav-item">
+                            <a href="{{ route("admin.extra-settings.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/extra-settings") || request()->is("admin/extra-settings/*") ? "c-active" : "" }}">
+                                <i class="fa-fw fas fa-mobile-alt c-sidebar-nav-icon">
+
+                                </i>
+                                {{ trans('cruds.extraSetting.title') }}
                             </a>
                         </li>
                     @endcan
